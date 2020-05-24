@@ -20,6 +20,15 @@ config :auction_web, AuctionWeb.Endpoint,
   pubsub_server: AuctionWeb.PubSub,
   live_view: [signing_salt: "yQwm+vO5"]
 
+config :auction, ecto_repos: [Auction.Repo]
+
+config :auction, Auction.Repo,
+  database: "auction",
+  username: "postgres",
+  password: "",
+  hostname: "localhost",
+  port: 5432
+
 # Sample configuration:
 #
 #     config :logger, :console,
